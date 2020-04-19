@@ -7,7 +7,12 @@
 * - the updated element must not share the same reference as the previous one.
 *
 */
+import { getState, setState } from "../store";
 
-const update = () => {};
+const update = (i, imgUrl) => {
+    let arr = [...getState()];
+    arr[i] = imgUrl;
+    setState(arr);
+};
 
 export default update;

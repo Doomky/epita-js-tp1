@@ -8,7 +8,12 @@
 * - you must use the functions from "../store"
 *
 */
+import { getState, setState } from "../store";
 
-const add = () => {};
+const add = (imgUrl) => {
+    let data = [...getState()];
+    let newData = data.concat(imgUrl);
+    setState(newData);
+};
 
 export default add;

@@ -6,7 +6,12 @@
 * - you must use the functions from "../store"
 *
 */
+import { getState } from "../store";
 
-const get = () => {};
+const get = (i) => {
+    let data = [...getState()];
+    let value = data[i];
+    return value;
+};
 
 export default get;
